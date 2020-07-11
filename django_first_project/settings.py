@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'vc$r=yvk&a@0^s2p)_j+sqly1zlfg$k=exer^n#s4+yac$^6s8'
+SECRET_KEY = os.environ['SECRET_KEY2']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -134,9 +134,9 @@ LOGIN_URL = 'login'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-AWS_ACCESS_KEY_ID = 'AKIA6GHGLGPSRUCOAQFZ'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'mydjangoblog'
+AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID2']
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY2']
+AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME2']
 
 
 AWS_S3_FILE_OVERWRITE = False
